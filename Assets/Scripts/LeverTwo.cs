@@ -28,7 +28,7 @@ public class LeverTwo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        leverInteract();
+       leverInteract();
     }
 
 
@@ -36,8 +36,6 @@ public class LeverTwo : MonoBehaviour
     {
         if (_ts.playerEntered == true)
         {
-
-
             if (Input.GetKeyDown(KeyCode.E) && leverPulled == false) // input of the player
             {
                 PullLever();
@@ -52,6 +50,7 @@ public class LeverTwo : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = crankdown;
         _as.clip = leverpulledaudio;
         _as.Play();
+
         PlatScript[0].StartCoroutine("MovePlatform");
         PlatScript[1].StartCoroutine("MovePlatform");
 
